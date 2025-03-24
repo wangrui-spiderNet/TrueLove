@@ -1,0 +1,167 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^van-(.*)": "@/components/vant/$1/index.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/splash/index",
+      "style": {
+        "navigationBarTitleText": "True Love",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/onboarding/index",
+      "style": {
+        "navigationBarTitleText": "引导页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录/注册",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/report/index",
+      "style": {
+        "navigationBarTitleText": "报告",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/plan/index",
+      "style": {
+        "navigationBarTitleText": "行动计划",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/profile/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/valueTest/index",
+      "style": {
+        "navigationBarTitleText": "价值观测试",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/abilityTest/index",
+      "style": {
+        "navigationBarTitleText": "能力测评",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/interestTest/index",
+      "style": {
+        "navigationBarTitleText": "兴趣探索",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/analysis/index",
+      "style": {
+        "navigationBarTitleText": "分析结果",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/recommendation/index",
+      "style": {
+        "navigationBarTitleText": "职业推荐",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/jobDetail/index",
+      "style": {
+        "navigationBarTitleText": "职业详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/createPlan/index",
+      "style": {
+        "navigationBarTitleText": "创建计划",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/community/index",
+      "style": {
+        "navigationBarTitleText": "社区",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mentorDetail/index",
+      "style": {
+        "navigationBarTitleText": "导师详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/chat/index",
+      "style": {
+        "navigationBarTitleText": "对话",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "True Love",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1E88E5",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/images/tabbar/home.png",
+        "selectedIconPath": "static/images/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/report/index",
+        "text": "报告",
+        "iconPath": "static/images/tabbar/report.png",
+        "selectedIconPath": "static/images/tabbar/report-active.png"
+      },
+      {
+        "pagePath": "pages/plan/index",
+        "text": "计划",
+        "iconPath": "static/images/tabbar/plan.png",
+        "selectedIconPath": "static/images/tabbar/plan-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "static/images/tabbar/profile.png",
+        "selectedIconPath": "static/images/tabbar/profile-active.png"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,56 @@
+// 颜色变量
+$primary-color: #1e88e5;
+$success-color: #4caf50;
+$warning-color: #ffc107;
+$error-color: #f44336;
+$info-color: #2196f3;
+
+// 文字颜色
+$text-color-primary: #333333;
+$text-color-regular: #666666;
+$text-color-secondary: #999999;
+
+// 背景颜色
+$bg-color: #f5f7fa;
+$bg-color-page: #f5f5f5;
+$bg-color-overlay: #ffffff;
+
+// 边框颜色
+$border-color: #eeeeee;
+$border-color-light: #e0e0e0;
+
+// 字体大小
+$font-size-small: 24rpx;
+$font-size-base: 28rpx;
+$font-size-medium: 32rpx;
+$font-size-large: 36rpx;
+$font-size-xlarge: 40rpx;
+$font-size-xxlarge: 48rpx;
+
+// 圆角
+$border-radius-small: 8rpx;
+$border-radius-base: 16rpx;
+$border-radius-large: 24rpx;
+$border-radius-circle: 50%;
+
+// 间距
+$spacing-mini: 8rpx;
+$spacing-small: 16rpx;
+$spacing-base: 24rpx;
+$spacing-large: 32rpx;
+$spacing-xlarge: 40rpx;
+$spacing-xxlarge: 48rpx;
+
+// 阴影
+$box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+$box-shadow-light: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+$box-shadow-dark: 0 8rpx 16rpx rgba(0, 0, 0, 0.15);
+
+// z-index层级
+$zindex-normal: 1;
+$zindex-affix: 10;
+$zindex-dropdown: 900;
+$zindex-modal: 1000;
+$zindex-popup: 1200;
+$zindex-toast: 1300;
+$zindex-tooltip: 1400; 

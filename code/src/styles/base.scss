@@ -1,0 +1,280 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './mixins.scss';
+
+// 全局通用样式
+
+// 文本样式
+.text-primary {
+  color: $primary-color;
+}
+
+.text-success {
+  color: $success-color;
+}
+
+.text-warning {
+  color: $warning-color;
+}
+
+.text-error {
+  color: $error-color;
+}
+
+.text-info {
+  color: $info-color;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// 字体大小
+.font-small {
+  font-size: $font-size-small;
+}
+
+.font-base {
+  font-size: $font-size-base;
+}
+
+.font-medium {
+  font-size: $font-size-medium;
+}
+
+.font-large {
+  font-size: $font-size-large;
+}
+
+.font-xlarge {
+  font-size: $font-size-xlarge;
+}
+
+.font-xxlarge {
+  font-size: $font-size-xxlarge;
+}
+
+// 边距
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-r-0 {
+  margin-right: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+.m-l-0 {
+  margin-left: 0;
+}
+
+.p-t-0 {
+  padding-top: 0;
+}
+
+.p-r-0 {
+  padding-right: 0;
+}
+
+.p-b-0 {
+  padding-bottom: 0;
+}
+
+.p-l-0 {
+  padding-left: 0;
+}
+
+// 弹性盒布局
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+// 定位
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+// 悬浮和遮罩
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: $zindex-modal;
+}
+
+// 常用组件样式
+.card {
+  background-color: $bg-color-overlay;
+  border-radius: $border-radius-base;
+  box-shadow: $box-shadow-light;
+  padding: $spacing-large;
+  margin-bottom: $spacing-base;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2rpx $spacing-mini;
+  border-radius: $border-radius-small;
+  font-size: $font-size-small;
+  line-height: 1.2;
+}
+
+.badge-primary {
+  background-color: rgba($primary-color, 0.1);
+  color: $primary-color;
+}
+
+.badge-success {
+  background-color: rgba($success-color, 0.1);
+  color: $success-color;
+}
+
+.badge-warning {
+  background-color: rgba($warning-color, 0.1);
+  color: $warning-color;
+}
+
+.badge-error {
+  background-color: rgba($error-color, 0.1);
+  color: $error-color;
+}
+
+// 按钮样式
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-small $spacing-xlarge;
+  border-radius: 100rpx;
+  font-size: $font-size-medium;
+  line-height: 1.5;
+  text-align: center;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $primary-color;
+  border: 2rpx solid $primary-color;
+}
+
+.btn-success {
+  background-color: $success-color;
+  color: #ffffff;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+// 分割线
+.divider {
+  height: 2rpx;
+  background-color: $border-color;
+  margin: $spacing-base 0;
+}
+
+// 隐藏滚动条但允许滚动
+.hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+} 
