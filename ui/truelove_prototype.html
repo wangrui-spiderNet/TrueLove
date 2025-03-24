@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Love - 找到真正热爱的事情</title>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .prototype-section {
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        h1, h2, h3 {
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e88e5;
+        }
+        
+        h2 {
+            border-bottom: 2px solid #1e88e5;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        .screen-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .screen {
+            width: 320px;
+            height: 640px;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            border: 8px solid #222;
+        }
+        
+        .screen-header {
+            height: 50px;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .screen-content {
+            height: 590px;
+            overflow-y: auto;
+            background-color: #f5f7fa;
+        }
+        
+        .screen-title {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1e88e5;
+            color: white;
+            border-radius: 100px;
+            font-weight: 500;
+            text-align: center;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(30,136,229,0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #1e88e5;
+            border: 1px solid #1e88e5;
+            box-shadow: none;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        
+        .tab-bar {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: white;
+            border-top: 1px solid #eee;
+            padding: 8px 0;
+        }
+        
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .tab-item.active {
+            color: #1e88e5;
+        }
+        
+        .tab-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #1e88e5;
+            width: 30%;
+        }
+        
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #e1f5fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1e88e5;
+            margin-right: 15px;
+        }
+        
+        .question-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .option {
+            display: block;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        .option.selected {
+            background: #e3f2fd;
+            border-color: #1e88e5;
+        }
+        
+        .chart {
+            height: 200px;
+            margin: 20px 0;
+            background: #f0f8ff;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            background: #1e88e5;
+        }
+        
+        .recommendation-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid #1e88e5;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #e3f2fd;
+            color: #1e88e5;
+            border-radius: 100px;
+            font-size: 12px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .profile-section {
+            padding: 15px;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>True Love - 找到真正热爱的事情</h1>
+        
+        <div class="prototype-section">
+            <h2>1. 引导与登录</h2>
+            <div class="screen-container">
+                <!-- 启动页 -->
+                <div class="screen">
+                    <div class="screen-title">启动页</div>
+                    <div class="screen-content" style="background: #1e88e5; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; color: white;">
+                        <div style="font-size: 48px; margin-bottom: 20px;">❤️</div>
+                        <h2 style="color: white; margin-bottom: 10px;">True Love</h2>
+                        <p style="margin-bottom: 40px;">找到真正热爱的事情</p>
+                        <p style="font-size: 14px; opacity: 0.7; position: absolute; bottom: 30px;">探索自我 · 发现热爱 · 活出意义</p>
+                    </div>
+                </div>
+                
+                <!-- 引导页1 -->
+                <div class="screen">
+                    <div class="screen-title">引导页1</div>
+                    <div class="screen-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+                        <div style="width: 200px; height: 200px; background: #e1f5fe; border-radius: 50%; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; font-size: 64px;">🧭</div>
+                        <h3 style="margin-bottom: 20px;">发现你的价值观</h3>
+                        <p style="color: #666; margin-bottom: 40px; padding: 0 20px;">了解什么对你来说最重要，找到内心真正的驱动力</p>
+                        <div style="display: flex; margin-top: 40px;">
+                            <div style="width: 8px; height: 8px; background: #1e88e5; border-radius: 50%; margin: 0 4px;"></div>
+                            <div style="width: 8px; height: 8px; background: #e0e0e0; border-radius: 50%; margin: 0 4px;"></div>
+                            <div style="width: 8px; height: 8px; background: #e0e0e0; border-radius: 50%; margin: 0 4px;"></div>
+                        </div>
+                        <div class="btn" style="position: absolute; bottom: 40px; width: 80%;">下一步</div>
+                    </div>
+                </div>
+                
+                <!-- 引导页2 -->
+                <div class="screen">
+                    <div class="screen-title">引导页2</div>
+                    <div class="screen-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+                        <div style="width: 200px; height: 200px; background: #e1f5fe; border-radius: 50%; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; font-size: 64px;">💪</div>
+                        <h3 style="margin-bottom: 20px;">认识你的优势</h3>
+                        <p style="color: #666; margin-bottom: 40px; padding: 0 20px;">发掘你的天赋和技能，了解你最擅长的领域</p>
+                        <div style="display: flex; margin-top: 40px;">
+                            <div style="width: 8px; height: 8px; background: #e0e0e0; border-radius: 50%; margin: 0 4px;"></div>
+                            <div style="width: 8px; height: 8px; background: #1e88e5; border-radius: 50%; margin: 0 4px;"></div>
+                            <div style="width: 8px; height: 8px; background: #e0e0e0; border-radius: 50%; margin: 0 4px;"></div>
+                        </div>
+                        <div class="btn" style="position: absolute; bottom: 40px; width: 80%;">下一步</div>
+                    </div>
+                </div>
+                
+                <!-- 引导页3 -->
+                <div class="screen">
+                    <div class="screen-title">引导页3</div>
+                    <div class="screen-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+                        <div style="width: 200px; height: 200px; background: #e1f5fe; border-radius: 50%; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; font-size: 64px;">🔍</div>
+                        <h3 style="margin-bottom: 20px;">探索你的兴趣</h3>
+                        <p style="color: #666; margin-bottom: 40px; padding: 0 20px;">区分短暂的热情和持久的兴趣，找到真正能长期投入的领域</p>
+                        <div style="display: flex; margin-top: 40px;">
+                            <div style="width: 8px; height: 8px; background: #e0e0e0; border-radius: 50%; margin: 0 4px;"></div>
+                            <div style="width: 8px; height: 8px; background: #e0e0e0; border-radius: 50%; margin: 0 4px;"></div>
+                            <div style="width: 8px; height: 8px; background: #1e88e5; border-radius: 50%; margin: 0 4px;"></div>
+                        </div>
+                        <div class="btn" style="position: absolute; bottom: 40px; width: 80%;">开始探索</div>
+                    </div>
+                </div>
+                
+                <!-- 登录页 -->
+                <div class="screen">
+                    <div class="screen-title">登录页</div>
+                    <div class="screen-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px 20px;">
+                        <h2 style="margin-bottom: 40px; text-align: center;">欢迎来到 True Love</h2>
+                        <input type="text" class="input-field" placeholder="手机号码">
+                        <input type="password" class="input-field" placeholder="验证码">
+                        <div class="btn" style="width: 100%; margin-top: 20px;">登录 / 注册</div>
+                        <p style="margin-top: 20px; font-size: 14px; color: #999; text-align: center;">或者使用以下方式登录</p>
+                        <div style="display: flex; justify-content: center; margin-top: 20px;">
+                            <div style="width: 50px; height: 50px; background: #f5f5f5; border-radius: 50%; margin: 0 10px; display: flex; align-items: center; justify-content: center;">微</div>
+                            <div style="width: 50px; height: 50px; background: #f5f5f5; border-radius: 50%; margin: 0 10px; display: flex; align-items: center; justify-content: center;">Q</div>
+                            <div style="width: 50px; height: 50px; background: #f5f5f5; border-radius: 50%; margin: 0 10px; display: flex; align-items: center; justify-content: center;">微</div>
+                        </div>
+                        <p style="margin-top: 40px; font-size: 12px; color: #999; text-align: center;">登录即表示您同意我们的<span style="color: #1e88e5;">服务条款</span>和<span style="color: #1e88e5;">隐私政策</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="prototype-section">
+            <h2>2. 主页与导航</h2>
+            <div class="screen-container">
+                <!-- 首页 -->
+                <div class="screen">
+                    <div class="screen-title">首页</div>
+                    <div class="screen-content" style="padding: 20px 15px 80px 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="margin: 0;">你好，小李</h3>
+                            <div style="width: 40px; height: 40px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center;">李</div>
+                        </div>
+                        
+                        <div class="card" style="position: relative; background: linear-gradient(135deg, #1e88e5, #5e35b1); color: white;">
+                            <h3 style="margin-top: 0;">你的探索进度</h3>
+                            <p>完成三个维度测评，发现你真正热爱的事情</p>
+                            <div class="progress-bar" style="background: rgba(255,255,255,0.3);">
+                                <div class="progress-fill" style="width: 67%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                                <span style="font-size: 12px;">2/3 完成</span>
+                                <span style="font-size: 12px;">继续探索 ></span>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 25px;">探索之旅</h3>
+                        
+                        <div class="card" style="display: flex; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e3f2fd; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 15px;">🧭</div>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0 0 5px 0;">价值观测试</h4>
+                                <p style="margin: 0; font-size: 14px; color: #666;">了解什么对你最重要</p>
+                            </div>
+                            <div style="width: 24px; height: 24px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">✓</div>
+                        </div>
+                        
+                        <div class="card" style="display: flex; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e3f2fd; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 15px;">💪</div>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0 0 5px 0;">能力测评</h4>
+                                <p style="margin: 0; font-size: 14px; color: #666;">发现你的优势和天赋</p>
+                            </div>
+                            <div style="width: 24px; height: 24px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">✓</div>
+                        </div>
+                        
+                        <div class="card" style="display: flex; align-items: center;">
+                            <div style="width: 50px; height: 50px; background: #e3f2fd; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 15px;">🔍</div>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0 0 5px 0;">兴趣探索</h4>
+                                <p style="margin: 0; font-size: 14px; color: #666;">找到长期投入的热爱</p>
+                            </div>
+                            <div style="width: 24px; height: 24px; border: 2px solid #1e88e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;"></div>
+                        </div>
+                        
+                        <h3 style="margin-top: 25px;">推荐阅读</h3>
+                        
+                        <div class="card">
+                            <h4 style="margin-top: 0;">如何区分真正的热爱与一时兴起</h4>
+                            <p style="font-size: 14px; color: #666;">了解持久兴趣和短暂热情的区别，避免频繁跳槽和迷茫...</p>
+                            <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                                <span style="font-size: 12px; color: #999;">5分钟阅读</span>
+                                <span style="font-size: 12px; color: #1e88e5;">阅读全文 ></span>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-bar">
+                            <div class="tab-item active">
+                                <div class="tab-icon">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 我的报告页 -->
+                <div class="screen">
+                    <div class="screen-title">我的报告页</div>
+                    <div class="screen-content" style="padding: 20px 15px 80px 15px;">
+                        <h3 style="margin-top: 0;">我的自我探索报告</h3>
+                        
+                        <div class="card">
+                            <h4 style="margin-top: 0; color: #1e88e5;">你的核心价值观</h4>
+                            <div style="display: flex; margin: 15px 0; flex-wrap: wrap;">
+                                <div class="badge">创造性</div>
+                                <div class="badge">自由</div>
+                                <div class="badge">帮助他人</div>
+                                <div class="badge">家庭</div>
+                                <div class="badge">成长</div>
+                            </div>
+                            <p style="font-size: 14px; color: #666;">你重视能够发挥创造力和保持自由的环境，同时也看重能够帮助他人和与家人在一起的机会。个人成长对你来说也非常重要。</p>
+                            <span style="font-size: 12px; color: #1e88e5;">查看详情 ></span>
+                        </div>
+                        
+                        <div class="card">
+                            <h4 style="margin-top: 0; color: #1e88e5;">你的核心能力</h4>
+                            <div style="display: flex; flex-direction: column; margin: 15px 0;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>创意思维</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                                
+                                <div style="display: flex; justify-content: space-between; margin: 10px 0 5px 0;">
+                                    <span>沟通表达</span>
+                                    <span>78%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%;"></div>
+                                </div>
+                                
+                                <div style="display: flex; justify-content: space-between; margin: 10px 0 5px 0;">
+                                    <span>分析能力</span>
+                                    <span>72%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 72%;"></div>
+                                </div>
+                            </div>
+                            <span style="font-size: 12px; color: #1e88e5;">查看详情 ></span>
+                        </div>
+                        
+                        <div class="card">
+                            <h4 style="margin-top: 0; color: #1e88e5;">你的持久兴趣</h4>
+                            <div style="display: flex; margin: 15px 0; flex-wrap: wrap;">
+                                <div class="badge">艺术设计</div>
+                                <div class="badge">教育培训</div>
+                                <div class="badge">内容创作</div>
+                                <div class="badge">心理学</div>
+                            </div>
+                            <p style="font-size: 14px; color: #666;">你对于艺术设计和创意表达有持久的兴趣，同时也喜欢教育和帮助他人成长的活动。心理学领域也是你常常探索的方向。</p>
+                            <span style="font-size: 12px; color: #1e88e5;">查看详情 ></span>
+                        </div>
+                        
+                        <div class="card" style="background: linear-gradient(135deg, #4caf50, #2e7d32); color: white;">
+                            <h4 style="margin-top: 0;">你的最佳匹配领域</h4>
+                            <p style="font-weight: bold; font-size: 18px;">创意教育者 / 内容创作者</p>
+                            <p>结合你的价值观、能力和兴趣，你最适合在创意教育和内容创作领域发展，可以考虑以下职业方向：</p>
+                            <ul>
+                                <li>艺术教育工作者</li>
+                                <li>创意课程设计师</li>
+                                <li>教育内容创作者</li>
+                                <li>设计思维培训师</li>
+                            </ul>
+                            <div class="btn" style="background: white; color: #2e7d32; margin-top: 15px;">制定行动计划</div>
+                        </div>
+                        
+                        <div class="tab-bar">
+                            <div class="tab-item">
+                                <div class="tab-icon">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="tab-item active">
+                                <div class="tab-icon">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 行动计划页 -->
+                <div class="screen">
+                    <div class="screen-title">行动计划页</div>
+                    <div class="screen-content" style="padding: 20px 15px 80px 15px;">
+                        <h3 style="margin-top: 0;">我的行动计划</h3>
+                        
+                        <div class="card" style="background: #f5f7fa; border: 1px dashed #1e88e5;">
+                            <h4 style="margin-top: 0; color: #1e88e5; text-align: center;">创建新的行动计划</h4>
+                            <div class="btn" style="width: 100%;">开始制定</div>
+                        </div>
+                        
+                        <div class="card">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h4 style="margin: 0; color: #1e88e5;">探索艺术教育领域</h4>
+                                <span style="font-size: 12px; padding: 4px 8px; background: #e8f5e9; color: #4caf50; border-radius: 4px;">进行中</span>
+                            </div>
+                            <p style="font-size: 14px; color: #666; margin-top: 10px;">目标：了解艺术教育行业现状，确定自己感兴趣的细分方向</p>
+                            <div class="progress-bar" style="margin: 15px 0 5px 0;">
+                                <div class="progress-fill" style="width: 35%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="font-size: 12px; color: #999;">35% 完成</span>
+                                <span style="font-size: 12px; color: #999;">截止日期：2023-12-31</span>
+                            </div>
+                            <div style="display: flex; margin-top: 15px;">
+                                <div class="btn" style="flex: 1; margin-right: 10px;">查看详情</div>
+                                <div class="btn btn-secondary" style="flex: 1;">更新进度</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h4 style="margin: 0; color: #1e88e5;">学习内容创作技能</h4>
+                                <span style="font-size: 12px; padding: 4px 8px; background: #e8f5e9; color: #4caf50; border-radius: 4px;">进行中</span>
+                            </div>
+                            <p style="font-size: 14px; color: #666; margin-top: 10px;">目标：掌握视频内容创作的基本技能，完成3个作品</p>
+                            <div class="progress-bar" style="margin: 15px 0 5px 0;">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="font-size: 12px; color: #999;">60% 完成</span>
+                                <span style="font-size: 12px; color: #999;">截止日期：2023-11-15</span>
+                            </div>
+                            <div style="display: flex; margin-top: 15px;">
+                                <div class="btn" style="flex: 1; margin-right: 10px;">查看详情</div>
+                                <div class="btn btn-secondary" style="flex: 1;">更新进度</div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 25px;">推荐资源</h3>
+                        
+                        <div class="card">
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 60px; background: #e3f2fd; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 15px;">📚</div>
+                                <div>
+                                    <h4 style="margin: 0 0 5px 0;">艺术教育入门指南</h4>
+                                    <p style="margin: 0; font-size: 14px; color: #666;">了解行业现状和发展方向</p>
+                                </div>
+                            </div>
+                            <div class="btn" style="margin-top: 15px;">查看资源</div>
+                        </div>
+                        
+                        <div class="card">
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 60px; height: 60px; background: #e3f2fd; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 15px;">🎓</div>
+                                <div>
+                                    <h4 style="margin: 0 0 5px 0;">视频内容创作课程</h4>
+                                    <p style="margin: 0; font-size: 14px; color: #666;">从零开始学习视频创作</p>
+                                </div>
+                            </div>
+                            <div class="btn" style="margin-top: 15px;">
+                                <div class="btn" style="margin-top: 15px;">免费试学</div>
+                            </div>
+                            
+                            <div class="tab-bar">
+                                <div class="tab-item">
+                                    <div class="tab-icon">🏠</div>
+                                    <span>首页</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">📊</div>
+                                    <span>报告</span>
+                                </div>
+                                <div class="tab-item active">
+                                    <div class="tab-icon">🎯</div>
+                                    <span>计划</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">👤</div>
+                                    <span>我的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 个人中心页 -->
+                    <div class="screen">
+                        <div class="screen-title">个人中心页</div>
+                        <div class="screen-content" style="padding: 20px 15px 80px 15px;">
+                            <div class="profile-header">
+                                <div class="avatar" style="width: 80px; height: 80px; font-size: 24px;">李</div>
+                                <div>
+                                    <h3 style="margin: 0 0 5px 0;">小李</h3>
+                                    <p style="margin: 0; font-size: 14px; color: #666;">探索中的灵魂</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">我的探索统计</h4>
+                                <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+                                    <div style="text-align: center;">
+                                        <h3 style="margin: 0; color: #1e88e5;">2/3</h3>
+                                        <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">测评完成</p>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <h3 style="margin: 0; color: #1e88e5;">2</h3>
+                                        <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">行动计划</p>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <h3 style="margin: 0; color: #1e88e5;">45%</h3>
+                                        <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">总进度</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 25px;">
+                                <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 40px; height: 40px; background: #e3f2fd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">📋</div>
+                                        <span>我的测评记录</span>
+                                    </div>
+                                    <span style="font-size: 18px; color: #999;">></span>
+                                </div>
+                                
+                                <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 40px; height: 40px; background: #e3f2fd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">🎯</div>
+                                        <span>我的行动计划</span>
+                                    </div>
+                                    <span style="font-size: 18px; color: #999;">></span>
+                                </div>
+                                
+                                <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 40px; height: 40px; background: #e3f2fd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">📚</div>
+                                        <span>我的学习资源</span>
+                                    </div>
+                                    <span style="font-size: 18px; color: #999;">></span>
+                                </div>
+                                
+                                <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 40px; height: 40px; background: #e3f2fd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">⚙️</div>
+                                        <span>设置</span>
+                                    </div>
+                                    <span style="font-size: 18px; color: #999;">></span>
+                                </div>
+                                
+                                <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 40px; height: 40px; background: #e3f2fd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">📞</div>
+                                        <span>联系客服</span>
+                                    </div>
+                                    <span style="font-size: 18px; color: #999;">></span>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-bar">
+                                <div class="tab-item">
+                                    <div class="tab-icon">🏠</div>
+                                    <span>首页</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">📊</div>
+                                    <span>报告</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">🎯</div>
+                                    <span>计划</span>
+                                </div>
+                                <div class="tab-item active">
+                                    <div class="tab-icon">👤</div>
+                                    <span>我的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prototype-section">
+                <h2>3. 测评与探索流程</h2>
+                <div class="screen-container">
+                    <!-- 价值观测试引导页 -->
+                    <div class="screen">
+                        <div class="screen-title">价值观测试引导页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <h3 style="text-align: center; margin: 20px 0;">价值观测试</h3>
+                            <div style="width: 150px; height: 150px; background: #e3f2fd; border-radius: 50%; margin: 30px auto; display: flex; align-items: center; justify-content: center; font-size: 64px;">🧭</div>
+                            
+                            <p style="text-align: center; margin: 30px 20px; line-height: 1.6;">价值观是指引我们做决定的内在准则，了解自己真正看重什么，是找到热爱事业的第一步。</p>
+                            
+                            <div style="background: #f5f7fa; border-radius: 12px; padding: 15px; margin: 20px 0;">
+                                <h4 style="margin-top: 0;">你将了解到：</h4>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>你最核心的5-7个价值观</li>
+                                    <li>这些价值观如何影响你的职业选择</li>
+                                    <li>如何利用价值观来评估职业机会</li>
+                                </ul>
+                            </div>
+                            
+                            <p style="font-size: 14px; color: #666; text-align: center; margin: 30px 20px;">完成测试大约需要 15-20 分钟</p>
+                            
+                            <div class="btn" style="width: 100%; margin-top: 30px;">开始测试</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 价值观测试问题页 -->
+                    <div class="screen">
+                        <div class="screen-title">价值观测试问题页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <h3 style="margin: 0;">价值观测试</h3>
+                                <span style="font-size: 14px; color: #1e88e5;">问题 5/20</span>
+                            </div>
+                            
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%;"></div>
+                            </div>
+                            
+                            <div class="question-card">
+                                <h4 style="margin-top: 0;">当你回顾人生中最满足的经历时，哪些因素最常出现？</h4>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>帮助他人取得进步或解决问题</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option selected">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #1e88e5; border-radius: 50%; margin-right: 15px; background: #1e88e5;"></div>
+                                        <span>创造出新的、独特的事物或想法</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>取得明确的成就或认可</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>与他人建立深厚的联系和关系</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>独立自主地做决定和行动</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                                <div class="btn btn-secondary" style="width: 48%;">上一题</div>
+                                <div class="btn" style="width: 48%;">下一题</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 能力测评问题页 -->
+                    <div class="screen">
+                        <div class="screen-title">能力测评问题页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <h3 style="margin: 0;">能力测评</h3>
+                                <span style="font-size: 14px; color: #1e88e5;">问题 7/25</span>
+                            </div>
+                            
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 28%;"></div>
+                            </div>
+                            
+                            <div class="question-card">
+                                <h4 style="margin-top: 0;">以下情境中，你感觉最自信和得心应手的是：</h4>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>分析复杂数据并找出关键模式</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>组织团队并协调多方资源完成项目</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option selected">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #1e88e5; border-radius: 50%; margin-right: 15px; background: #1e88e5;"></div>
+                                        <span>通过视觉或语言创作表达想法和情感</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>指导和帮助他人学习新知识或技能</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>解决技术问题或构建实用系统</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                                <div class="btn btn-secondary" style="width: 48%;">上一题</div>
+                                <div class="btn" style="width: 48%;">下一题</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 兴趣探索问题页 -->
+                    <div class="screen">
+                        <div class="screen-title">兴趣探索问题页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <h3 style="margin: 0;">兴趣探索</h3>
+                                <span style="font-size: 14px; color: #1e88e5;">问题 3/15</span>
+                            </div>
+                            
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%;"></div>
+                            </div>
+                            
+                            <div class="question-card">
+                                <h4 style="margin-top: 0;">你会因为什么类型的活动而忘记时间的流逝？</h4>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>阅读和研究特定领域的知识</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>与他人深入交流和讨论</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option selected">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #1e88e5; border-radius: 50%; margin-right: 15px; background: #1e88e5;"></div>
+                                        <span>进行艺术或创意表达活动</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>解决实际问题或动手制作</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="option">
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 20px; height: 20px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px;"></div>
+                                        <span>计划和组织事务</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 30px;">
+                                <h4>反思问题</h4>
+                                <p style="font-size: 14px; color: #666;">回想最近的几次你完全投入其中的经历，有什么共同点？</p>
+                                <textarea class="input-field" style="height: 100px;" placeholder="请输入你的反思..."></textarea>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                                <div class="btn btn-secondary" style="width: 48%;">上一题</div>
+                                <div class="btn" style="width: 48%;">下一题</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prototype-section">
+                <h2>4. 分析与推荐</h2>
+                <div class="screen-container">
+                    <!-- 分析结果页 -->
+                    <div class="screen">
+                        <div class="screen-title">分析结果页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="text-align: center; margin: 20px 0;">
+                                <h3 style="margin-bottom: 5px;">你的自我探索报告</h3>
+                                <p style="font-size: 14px; color: #666; margin-top: 0;">基于三个维度的综合分析</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0; color: #1e88e5;">价值观分析</h4>
+                                <p style="font-size: 14px;">你的核心价值观是：</p>
+                                <div style="display: flex; flex-wrap: wrap; margin: 15px 0;">
+                                    <div class="badge">创造性 (87%)</div>
+                                    <div class="badge">自由 (82%)</div>
+                                    <div class="badge">帮助他人 (78%)</div>
+                                    <div class="badge">家庭 (75%)</div>
+                                    <div class="badge">成长 (72%)</div>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">你高度重视能够发挥创造力的环境，同时也看重自由和能够帮助他人的机会。家庭和持续成长对你来说也非常重要。</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0; color: #1e88e5;">能力分析</h4>
+                                <p style="font-size: 14px;">你的突出能力是：</p>
+                                <div style="margin: 15px 0;">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                        <span>创意思维</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 85%;"></div>
+                                    </div>
+                                    
+                                    <div style="display: flex; justify-content: space-between; margin: 10px 0 5px 0;">
+                                        <span>沟通表达</span>
+                                        <span>78%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 78%;"></div>
+                                    </div>
+                                    
+                                    <div style="display: flex; justify-content: space-between; margin: 10px 0 5px 0;">
+                                        <span>分析能力</span>
+                                        <span>72%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 72%;"></div>
+                                    </div>
+                                    
+                                    <div style="display: flex; justify-content: space-between; margin: 10px 0 5px 0;">
+                                        <span>教学指导</span>
+                                        <span>68%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 68%;"></div>
+                                    </div>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">你在创意思维和表达方面展现出显著优势，这使你能够产生新想法并清晰地传达给他人。你的分析和教学能力也很强。</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0; color: #1e88e5;">兴趣分析</h4>
+                                <p style="font-size: 14px;">你的持久兴趣领域是：</p>
+                                <div style="display: flex; flex-wrap: wrap; margin: 15px 0;">
+                                    <div class="badge">艺术设计 (90%)</div>
+                                    <div class="badge">教育培训 (85%)</div>
+                                    <div class="badge">内容创作 (82%)</div>
+                                    <div class="badge">心理学 (75%)</div>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">你对于艺术设计和创意表达有持久的兴趣，同时也喜欢教育和帮助他人成长的活动。内容创作和心理学领域也引起你的持续关注。</p>
+                            </div>
+                            
+                            <div class="btn" style="width: 100%; margin: 30px 0;">查看职业推荐</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 推荐职业页 -->
+                    <div class="screen">
+                        <div class="screen-title">推荐职业页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="text-align: center; margin: 20px 0;">
+                                <h3 style="margin-bottom: 5px;">为你推荐的职业方向</h3>
+                                <p style="font-size: 14px; color: #666; margin-top: 0;">基于你的价值观、能力和兴趣</p>
+                            </div>
+                            
+                            <div class="recommendation-card">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                    <h4 style="margin: 0;">艺术教育工作者</h4>
+                                    <span style="font-size: 14px; padding: 4px 12px; background: #e3f2fd; color: #1e88e5; border-radius: 100px;">匹配度: 92%</span>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">艺术教育工作者在学校、社区中心或私人工作室教授艺术技能，帮助学生发展创造力和表达能力。</p>
+                                <div style="margin: 15px 0;">
+                                    <h5 style="margin: 10px 0;">匹配原因：</h5>
+                                    <div style="display: flex; flex-wrap: wrap;">
+                                        <div class="badge">创造性 ✓</div>
+                                        <div class="badge">帮助他人 ✓</div>
+                                        <div class="badge">创意思维 ✓</div>
+                                        <div class="badge">教学指导 ✓</div>
+                                        <div class="badge">艺术设计 ✓</div>
+                                        <div class="badge">教育培训 ✓</div>
+                                    </div>
+                                </div>
+                                <div class="btn" style="width: 100%;">了解详情</div>
+                            </div>
+                            
+                            <div class="recommendation-card">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                    <h4 style="margin: 0;">教育内容创作者</h4>
+                                    <span style="font-size: 14px; padding: 4px 12px; background: #e3f2fd; color: #1e88e5; border-radius: 100px;">匹配度: 88%</span>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">教育内容创作者制作视频、播客、文章等形式的学习内容，帮助人们获取知识和技能。</p>
+                                <div style="margin: 15px 0;">
+                                    <h5 style="margin: 10px 0;">匹配原因：</h5>
+                                    <div style="display: flex; flex-wrap: wrap;">
+                                        <div class="badge">创造性 ✓</div>
+                                        <div class="badge">自由 ✓</div>
+                                        <div class="badge">帮助他人 ✓</div>
+                                        <div class="badge">创意思维 ✓</div>
+                                        <div class="badge">沟通表达 ✓</div>
+                                        <div class="badge">内容创作 ✓</div>
+                                    </div>
+                                </div>
+                                <div class="btn" style="width: 100%;">了解详情</div>
+                            </div>
+                            
+                            <div class="recommendation-card">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                    <h4 style="margin: 0;">创意课程设计师</h4>
+                                    <span style="font-size: 14px; padding: 4px 12px; background: #e3f2fd; color: #1e88e5; border-radius: 100px;">匹配度: 85%</span>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">创意课程设计师为教育机构或在线平台开发互动性强、富有创意的学习项目和课程内容。</p>
+                                <div style="margin: 15px 0;">
+                                    <h5 style="margin: 10px 0;">匹配原因：</h5>
+                                    <div style="display: flex; flex-wrap: wrap;">
+                                        <div class="badge">创造性 ✓</div>
+                                        <div class="badge">帮助他人 ✓</div>
+                                        <div class="badge">创意思维 ✓</div>
+                                        <div class="badge">分析能力 ✓</div>
+                                        <div class="badge">教育培训 ✓</div>
+                                    </div>
+                                </div>
+                                <div class="btn" style="width: 100%;">了解详情</div>
+                            </div>
+                            
+                            <div class="btn" style="width: 100%; margin: 30px 0;">制定行动计划</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 职业详情页 -->
+                    <div class="screen">
+                        <div class="screen-title">职业详情页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="margin-bottom: 20px;">
+                                <h3 style="margin: 0 0 5px 0;">艺术教育工作者</h3>
+                                <span style="font-size: 14px; padding: 4px 12px; background: #e3f2fd; color: #1e88e5; border-radius: 100px;">匹配度: 92%</span>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">职业描述</h4>
+                                <p style="font-size: 14px; line-height: 1.6;">艺术教育工作者负责教授绘画、雕塑、摄影等艺术形式，不仅传授技能，还培养学生的创造力、批判性思维和自我表达能力。他们可以在K-12学校、高等教育机构、社区中心、艺术工作室或线上平台工作。</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">为什么适合你</h4>
+                                <ul style="padding-left: 20px; font-size: 14px; line-height: 1.6;">
+                                    <li>满足你创造性表达的核心价值观</li>
+                                    <li>符合你帮助他人成长的追求</li>
+                                    <li>充分发挥你的创意思维和沟通能力</li>
+                                    <li>结合了你对艺术设计和教育培训的兴趣</li>
+                                    <li>提供一定的自由度和成长空间</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">所需技能</h4>
+                                <div style="display: flex; flex-wrap: wrap; margin: 10px 0;">
+                                    <div class="badge" style="margin-right: 10px; margin-bottom: 10px;">艺术技能</div>
+                                    <div class="badge" style="margin-right: 10px; margin-bottom: 10px;">教学能力</div>
+                                    <div class="badge" style="margin-right: 10px; margin-bottom: 10px;">课程设计</div>
+                                    <div class="badge" style="margin-right: 10px; margin-bottom: 10px;">沟通表达</div>
+                                    <div class="badge" style="margin-right: 10px; margin-bottom: 10px;">组织能力</div>
+                                    <div class="badge" style="margin-right: 10px; margin-bottom: 10px;">评估技巧</div>
+                                </div>
+                                
+                                <h5 style="margin: 20px 0 10px 0;">你已具备的技能：</h5>
+                                <div style="display: flex; flex-wrap: wrap;">
+                                    <div class="badge" style="background: #e8f5e9; color: #4caf50; margin-right: 10px; margin-bottom: 10px;">创意思维</div>
+                                    <div class="badge" style="background: #e8f5e9; color: #4caf50; margin-right: 10px; margin-bottom: 10px;">沟通表达</div>
+                                    <div class="badge" style="background: #e8f5e9; color: #4caf50; margin-right: 10px; margin-bottom: 10px;">教学指导</div>
+                                </div>
+                                
+                                <h5 style="margin: 20px 0 10px 0;">需要发展的技能：</h5>
+                                <div style="display: flex; flex-wrap: wrap;">
+                                    <div class="badge" style="background: #ffebee; color: #f44336; margin-right: 10px; margin-bottom: 10px;">课程设计</div>
+                                    <div class="badge" style="background: #ffebee; color: #f44336; margin-right: 10px; margin-bottom: 10px;">评估方法</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">发展路径</h4>
+                                <div style="margin: 15px 0;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                        <div style="width: 30px; height: 30px; background: #1e88e5; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">1</div>
+                                        <div>
+                                            <h5 style="margin: 0;">入门阶段</h5>
+                                            <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">助教、志愿者、实习教师</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                        <div style="width: 30px; height: 30px; background: #1e88e5; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">2</div>
+                                        <div>
+                                            <h5 style="margin: 0;">成长阶段</h5>
+                                            <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">全职艺术教师、工作室导师</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center;">
+                                        <div style="width: 30px; height: 30px; background: #1e88e5; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">3</div>
+                                        <div>
+                                            <h5 style="margin: 0;">专业阶段</h5>
+                                            <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">艺术教育总监、课程开发者、线上平台创建者</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">学习资源</h4>
+                                <div style="margin: 15px 0;">
+                                    <h5 style="margin: 0 0 10px 0;">推荐课程</h5>
+                                    <ul style="padding-left: 20px; font-size: 14px; margin: 0;">
+                                        <li>艺术教育基础理论</li>
+                                        <li>创意教学方法</li>
+                                        <li>课程设计与开发</li>
+                                    </ul>
+                                    
+                                    <h5 style="margin: 20px 0 10px 0;">推荐书籍</h5>
+                                    <ul style="padding-left: 20px; font-size: 14px; margin: 0;">
+                                        <li>《艺术教育的力量》</li>
+                                        <li>《创意教学：从理论到实践》</li>
+                                        <li>《如何评估艺术学习》</li>
+                                    </ul>
+                                    
+                                    <h5 style="margin: 20px 0 10px 0;">实践机会</h5>
+                                    <ul style="padding-left: 20px; font-size: 14px; margin: 0;">
+                                        <li>社区艺术中心志愿者</li>
+                                        <li>线上艺术教学平台助教</li>
+                                        <li>学校艺术兴趣小组带领者</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; margin: 30px 0;">
+                                <div class="btn" style="flex: 1; margin-right: 10px;">保存到收藏</div>
+                                <div class="btn" style="flex: 1;">制定行动计划</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 行动计划创建页 -->
+                    <div class="screen">
+                        <div class="screen-title">行动计划创建页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <h3 style="margin-top: 0;">制定行动计划</h3>
+                            <p style="font-size: 14px; color: #666;">为你的艺术教育工作者职业发展创建计划</p>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">计划名称</h4>
+                                <input type="text" class="input-field" placeholder="例如：探索艺术教育领域" value="探索艺术教育领域">
+                                
+                                <h4 style="margin-top: 20px;">目标描述</h4>
+                                <textarea class="input-field" style="height: 100px;" placeholder="描述你想达成的具体目标...">了解艺术教育行业现状，确定自己感兴趣的细分方向，并获取入门所需的技能和资源。</textarea>
+                                
+                                <h4 style="margin-top: 20px;">目标期限</h4>
+                                <input type="date" class="input-field" value="2023-12-31">
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">关键步骤</h4>
+                                <div style="margin: 15px 0;">
+                                    <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                                        <input type="text" class="input-field" placeholder="步骤1" value="研究不同类型的艺术教育工作">
+                                        <textarea class="input-field" style="height: 60px;" placeholder="详细描述...">查找并阅读关于各类艺术教育工作的职业介绍，包括学校教师、社区艺术导师、线上教育等。</textarea>
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                            <span style="font-size: 14px;">截止日期：</span>
+                                            <input type="date" style="width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" value="2023-10-15">
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                                        <input type="text" class="input-field" placeholder="步骤2" value="参加艺术教育入门课程">
+                                        <textarea class="input-field" style="height: 60px;" placeholder="详细描述...">寻找并报名参加一门关于艺术教育基础的线上或线下课程。</textarea>
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                            <span style="font-size: 14px;">截止日期：</span>
+                                            <input type="date" style="width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" value="2023-11-15">
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px;">
+                                        <input type="text" class="input-field" placeholder="步骤3" value="寻找实践机会">
+                                        <textarea class="input-field" style="height: 60px;" placeholder="详细描述...">联系当地社区中心或艺术机构，寻找志愿者或助教机会，获取实际教学经验。</textarea>
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                            <span style="font-size: 14px;">截止日期：</span>
+                                            <input type="date" style="width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" value="2023-12-15">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn btn-secondary" style="width: 100%;">+ 添加步骤</div>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">资源需求</h4>
+                                <div style="margin: 15px 0;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                        <input type="checkbox" style="margin-right: 10px;">
+                                        <span>艺术教育入门课程费用</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                        <input type="checkbox" style="margin-right: 10px;">
+                                        <span>每周约10小时的学习和实践时间</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center;">
+                                        <input type="checkbox" style="margin-right: 10px;">
+                                        <span>艺术材料和教学工具</span>
+                                    </div>
+                                </div>
+                                <input type="text" class="input-field" placeholder="添加其他资源...">
+                            </div>
+                            
+                            <div class="btn" style="width: 100%; margin: 30px 0;">保存计划</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prototype-section">
+                <h2>5. 社区与支持功能</h2>
+                <div class="screen-container">
+                    <!-- 社区页 -->
+                    <div class="screen">
+                        <div class="screen-title">社区页</div>
+                        <div class="screen-content" style="padding: 20px 15px 80px 15px;">
+                            <h3 style="margin-top: 0;">探索社区</h3>
+                            
+                            <div style="display: flex; justify-content: space-between; margin: 20px 0 15px 0;">
+                                <div style="width: 48%; text-align: center; padding: 15px; background: #e3f2fd; border-radius: 12px; color: #1e88e5;">
+                                    <span style="font-size: 18px;">👥</span>
+                                    <p style="margin: 5px 0 0 0; font-size: 14px;">同路人</p>
+                                </div>
+                                <div style="width: 48%; text-align: center; padding: 15px; background: #f5f5f5; border-radius: 12px; color: #666;">
+                                    <span style="font-size: 18px;">👨‍🏫</span>
+                                    <p style="margin: 5px 0 0 0; font-size: 14px;">导师</p>
+                                </div>
+                            </div>
+                            
+                            <div style="margin: 20px 0;">
+                                <input type="text" class="input-field" placeholder="搜索话题、人或群组..." style="background: #f5f5f5;">
+                                
+                                <div style="margin: 15px 0; display: flex; overflow-x: auto;">
+                                    <div style="min-width: 100px; text-align: center; padding: 10px; background: #e3f2fd; border-radius: 100px; color: #1e88e5; margin-right: 10px; font-size: 14px;">全部</div>
+                                    <div style="min-width: 100px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 100px; color: #666; margin-right: 10px; font-size: 14px;">艺术教育</div>
+                                    <div style="min-width: 100px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 100px; color: #666; margin-right: 10px; font-size: 14px;">内容创作</div>
+                                    <div style="min-width: 120px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 100px; color: #666; margin-right: 10px; font-size: 14px;">职业转型</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="width: 50px; height: 50px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1e88e5; margin-right: 15px;">张</div>
+                                    <div>
+                                        <h4 style="margin: 0 0 5px 0;">张小明</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #666;">艺术教育工作者 | 5年经验</p>
+                                    </div>
+                                </div>
+                                <p style="font-size: 14px; line-height: 1.6;">我从事儿童艺术教育已有5年，很高兴能在这里和大家分享经验。刚开始可能会觉得困难，但当你看到学生们创作出令人惊喜的作品时，一切都值得了！</p>
+                                <div style="display: flex; margin-top: 15px;">
+                                    <div class="btn" style="flex: 1; margin-right: 10px;">查看详情</div>
+                                    <div class="btn btn-secondary" style="flex: 1;">发起对话</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="width: 50px; height: 50px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1e88e5; margin-right: 15px;">王</div>
+                                    <div>
+                                        <h4 style="margin: 0 0 5px 0;">王丽</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #666;">教育内容创作者 | 3年经验</p>
+                                    </div>
+                                </div>
+                                <p style="font-size: 14px; line-height: 1.6;">三年前我还在金融行业，现在是一名专职的教育内容创作者。如果你对职业转型有疑问，或者想了解内容创作的日常，欢迎交流！</p>
+                                <div style="display: flex; margin-top: 15px;">
+                                    <div class="btn" style="flex: 1; margin-right: 10px;">查看详情</div>
+                                    <div class="btn btn-secondary" style="flex: 1;">发起对话</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="width: 50px; height: 50px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1e88e5; margin-right: 15px;">李</div>
+                                    <div>
+                                        <h4 style="margin: 0 0 5px 0;">李佳</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #666;">职业探索中 | 艺术教育方向</p>
+                                    </div>
+                                </div>
+                                <p style="font-size: 14px; line-height: 1.6;">我和你一样，正在探索艺术教育这条路。刚刚在社区中心找到一个志愿者机会，很期待和大家分享我的探索历程！</p>
+                                <div style="display: flex; margin-top: 15px;">
+                                    <div class="btn" style="flex: 1; margin-right: 10px;">查看详情</div>
+                                    <div class="btn btn-secondary" style="flex: 1;">发起对话</div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-bar">
+                                <div class="tab-item">
+                                    <div class="tab-icon">🏠</div>
+                                    <span>首页</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">📊</div>
+                                    <span>报告</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">🎯</div>
+                                    <span>计划</span>
+                                </div>
+                                <div class="tab-item">
+                                    <div class="tab-icon">👤</div>
+                                    <span>我的</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 导师详情页 -->
+                    <div class="screen">
+                        <div class="screen-title">导师详情页</div>
+                        <div class="screen-content" style="padding: 20px 15px;">
+                            <div style="text-align: center; margin: 20px 0;">
+                                <div style="width: 100px; height: 100px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1e88e5; margin: 0 auto; font-size: 36px;">张</div>
+                                <h3 style="margin: 15px 0 5px 0;">张小明</h3>
+                                <p style="margin: 0; font-size: 14px; color: #666;">艺术教育工作者 | 5年经验</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">个人简介</h4>
+                                <p style="font-size: 14px; line-height: 1.6;">我是一名专注于儿童艺术教育的工作者，曾在公立学校和私人工作室任教。我相信每个孩子都有创造的天赋，我的使命是帮助他们发现并发展这种能力。我擅长通过游戏化方式激发学生的创造力和想象力。</p>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">专业领域</h4>
+                                <div style="display: flex; flex-wrap: wrap; margin: 15px 0;">
+                                    <div class="badge">儿童艺术教育</div>
+                                    <div class="badge">创意思维培养</div>
+                                    <div class="badge">课程设计</div>
+                                    <div class="badge">绘画技法</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">工作经历</h4>
+                                <div style="margin: 15px 0;">
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="margin: 0 0 5px 0;">彩虹艺术工作室</h5>
+                                        <p style="margin: 0 0 5px 0; font-size: 14px; color: #666;">艺术教育总监 | 2021-至今</p>
+                                        <p style="margin: 0; font-size: 14px;">负责课程开发和教师培训，为3-12岁儿童设计创意艺术课程。</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <h5 style="margin: 0 0 5px 0;">明德小学</h5>
+                                        <p style="margin: 0 0 5px 0; font-size: 14px; color: #666;">艺术教师 | 2018-2021</p>
+                                        <p style="margin: 0; font-size: 14px;">担任小学艺术教师，教授绘画、手工等课程，组织学校艺术活动。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">可提供帮助</h4>
+                                <ul style="padding-left: 20px; font-size: 14px; line-height: 1.6;">
+                                    <li>艺术教育行业入门指导</li>
+                                    <li>教学技巧与课堂管理分享</li>
+                                    <li>创意课程设计咨询</li>
+                                    <li>职业发展路径规划</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card">
+                                <h4 style="margin-top: 0;">指导评价</h4>
+                                <div style="margin: 15px 0;">
+                                    <div style="display: flex; margin-bottom: 15px;">
+                                        <div style="width: 40px; height: 40px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">赵</div>
+                                        <div>
+                                            <div style="display: flex; justify-content: space-between;">
+                                                <h5 style="margin: 0;">赵明</h5>
+                                                <div style="color: #ffc107;">★★★★★</div>
+                                            </div>
+                                            <p style="margin: 5px 0 0 0; font-size: 14px;">张老师的建议非常实用，帮我解决了课堂管理的难题。</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="display: flex;">
+                                        <div style="width: 40px; height: 40px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">孙</div>
+                                        <div>
+                                            <div style="display: flex; justify-content: space-between;">
+                                                <h5 style="margin: 0;">孙丽</h5>
+                                                <div style="color: #ffc107;">★★★★☆</div>
+                                            </div>
+                                            <p style="margin: 5px 0 0 0; font-size: 14px;">感谢张老师分享的职业发展建议，让我对未来更有信心。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; margin: 30px 0;">
+                                <div class="btn" style="flex: 1; margin-right: 10px;">预约指导</div>
+                                <div class="btn btn-secondary" style="flex: 1;">发送消息</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 对话页面 -->
+                    <div class="screen">
+                        <div class="screen-title">对话页面</div>
+                        <div class="screen-content" style="padding: 0 0 60px 0; display: flex; flex-direction: column;">
+                            <div style="display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #eee;">
+                                <div style="width: 40px; height: 40px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #1e88e5; margin-right: 15px;">张</div>
+                                <div>
+                                    <h4 style="margin: 0;">张小明</h4>
+                                    <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">在线 · 最近活跃于3分钟前</p>
+                                </div>
+                            </div>
+                            
+                            <div style="flex: 1; padding: 15px; overflow-y: auto;">
+                                <div style="margin-bottom: 20px;">
+                                    <div style="display: flex; margin-bottom: 5px;">
+                                        <div style="width: 30px; height: 30px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1e88e5; margin-right: 10px; font-size: 12px;">张</div>
+                                        <div style="max-width: 70%; background: #f5f5f5; padding: 10px 15px; border-radius: 18px; font-size: 14px;">
+                                            你好！很高兴认识你。我看到你对艺术教育很感兴趣，有什么我可以帮助你的吗？
+                                        </div>
+                                    </div>
+                                    <span style="font-size: 12px; color: #999; margin-left: 40px;">10:30</span>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: flex-end;">
+                                    <div style="max-width: 70%; background: #e3f2fd; padding: 10px 15px; border-radius: 18px; font-size: 14px;">
+                                        你好张老师！我正在考虑转向艺术教育领域，但没有相关经验。你觉得我应该从哪里开始呢？
+                                    </div>
+                                    <span style="font-size: 12px; color: #999;">10:32</span>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px;">
+                                    <div style="display: flex; margin-bottom: 5px;">
+                                        <div style="width: 30px; height: 30px; background: #e1f5fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1e88e5; margin-right: 10px; font-size: 12px;">张</div>
+                                        <div style="max-width: 70%; background: #f5f5f5; padding: 10px 15px; border-radius: 18px; font-size: 14px;">
+                                            这是个好问题！我建议你先从以下几个方面入手：
+                                            <br><br>
+                                            1. 参加一些基础的艺术教育课程或工作坊，了解教学理念和方法
+                                            <br><br>
+                                            2. 在社区中心或艺术机构寻找志愿者机会，积累实际经验
+                                            <br><br>
+                                            3. 阅读一些艺术教育的入门书籍，如《艺术教育的力量》
+                                            <br><br>
+                                            你有任何特定的艺术专长吗？
+                                        </div>
+                                    </div>
+                                    <span style="font-size: 12px; color: #999; margin-left: 40px;">10:35</span>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: flex-end;">
+                                    <div style="max-width: 70%; background: #e3f2fd; padding: 10px 15px; border-radius: 18px; font-size: 14px;">
+                                        非常感谢这些建议！我有一些绘画基础，主要是水彩和素描。你提到的志愿者机会很有启发，我应该如何寻找这类机会呢？
+                                    </div>
+                                    <span style="font-size: 12px; color: #999;">10:37</span>
+                                </div>
+                            </div>
+                            
+                            <div style="padding: 15px; border-top: 1px solid #eee; display: flex; align-items: center;">
+                                <input type="text" class="input-field" placeholder="输入消息..." style="margin: 0; flex: 1;">
+                                <div style="width: 40px; height: 40px; background: #1e88e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin-left: 10px;">→</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
