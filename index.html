@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Love - 找到真正热爱的事情</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-7xl mx-auto p-5">
+        <h1 class="text-center text-3xl font-bold text-blue-600 mb-8">True Love - 找到真正热爱的事情</h1>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-md mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-3 mb-6">1. 引导与登录</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- 启动页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">启动页</div>
+                    <div class="bg-blue-500 h-full flex flex-col justify-center items-center text-center p-5 text-white">
+                        <div class="text-6xl mb-5">❤️</div>
+                        <h2 class="text-2xl font-bold mb-3">True Love</h2>
+                        <p class="mb-10">找到真正热爱的事情</p>
+                        <p class="text-sm opacity-70 absolute bottom-8">探索自我 · 发现热爱 · 活出意义</p>
+                    </div>
+                </div>
+                
+                <!-- 引导页1 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">引导页1</div>
+                    <div class="h-full flex flex-col justify-center items-center text-center p-5">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="价值观探索" class="w-48 h-48 rounded-full mb-10 object-cover">
+                        <h3 class="text-xl font-bold mb-5">发现你的价值观</h3>
+                        <p class="text-gray-600 mb-10 px-5">了解什么对你来说最重要，找到内心真正的驱动力</p>
+                        <div class="flex mt-10">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mx-1"></div>
+                            <div class="w-2 h-2 bg-gray-300 rounded-full mx-1"></div>
+                            <div class="w-2 h-2 bg-gray-300 rounded-full mx-1"></div>
+                        </div>
+                        <button class="bg-blue-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-600 absolute bottom-10 w-4/5">下一步</button>
+                    </div>
+                </div>
+                
+                <!-- 引导页2 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">引导页2</div>
+                    <div class="h-full flex flex-col justify-center items-center text-center p-5">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="能力探索" class="w-48 h-48 rounded-full mb-10 object-cover">
+                        <h3 class="text-xl font-bold mb-5">认识你的优势</h3>
+                        <p class="text-gray-600 mb-10 px-5">发掘你的天赋和技能，了解你最擅长的领域</p>
+                        <div class="flex mt-10">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full mx-1"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mx-1"></div>
+                            <div class="w-2 h-2 bg-gray-300 rounded-full mx-1"></div>
+                        </div>
+                        <button class="bg-blue-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-600 absolute bottom-10 w-4/5">下一步</button>
+                    </div>
+                </div>
+                
+                <!-- 引导页3 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">引导页3</div>
+                    <div class="h-full flex flex-col justify-center items-center text-center p-5">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="兴趣探索" class="w-48 h-48 rounded-full mb-10 object-cover">
+                        <h3 class="text-xl font-bold mb-5">探索你的兴趣</h3>
+                        <p class="text-gray-600 mb-10 px-5">区分短暂的热情和持久的兴趣，找到真正能长期投入的领域</p>
+                        <div class="flex mt-10">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full mx-1"></div>
+                            <div class="w-2 h-2 bg-gray-300 rounded-full mx-1"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mx-1"></div>
+                        </div>
+                        <button class="bg-blue-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-600 absolute bottom-10 w-4/5">开始探索</button>
+                    </div>
+                </div>
+                
+                <!-- 登录页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">登录页</div>
+                    <div class="h-full flex flex-col justify-center items-center p-6">
+                        <h2 class="text-2xl font-bold mb-10 text-center">欢迎来到 True Love</h2>
+                        <input type="text" class="w-full p-4 border border-gray-300 rounded-lg mb-4" placeholder="手机号码">
+                        <input type="password" class="w-full p-4 border border-gray-300 rounded-lg mb-4" placeholder="验证码">
+                        <button class="w-full bg-blue-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-600 mt-5">登录 / 注册</button>
+                        <p class="mt-6 text-sm text-gray-500 text-center">或者使用以下方式登录</p>
+                        <div class="flex justify-center mt-5">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full mx-2 flex items-center justify-center">微</div>
+                            <div class="w-12 h-12 bg-gray-100 rounded-full mx-2 flex items-center justify-center">Q</div>
+                            <div class="w-12 h-12 bg-gray-100 rounded-full mx-2 flex items-center justify-center">微</div>
+                        </div>
+                        <p class="mt-10 text-xs text-gray-500 text-center">登录即表示您同意我们的<span class="text-blue-500">服务条款</span>和<span class="text-blue-500">隐私政策</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-md mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-3 mb-6">2. 主页与导航</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- 首页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">首页</div>
+                    <div class="h-full p-5 pb-20 overflow-y-auto">
+                        <div class="flex justify-between items-center mb-5">
+                            <h3 class="text-xl font-bold">你好，小李</h3>
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">李</div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-5 rounded-xl relative">
+                            <h3 class="font-bold mb-2">你的探索进度</h3>
+                            <p class="mb-3">完成三个维度测评，发现你真正热爱的事情</p>
+                            <div class="h-1.5 bg-white/30 rounded-full overflow-hidden mb-1">
+                                <div class="h-full bg-white w-2/3"></div>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span>2/3 完成</span>
+                                <span>继续探索 ></span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="font-bold mt-6 mb-3">探索之旅</h3>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-3 flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mr-4">🧭</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold mb-1">价值观测试</h4>
+                                <p class="text-sm text-gray-600">了解什么对你最重要</p>
+                            </div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs">✓</div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-3 flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mr-4">💪</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold mb-1">能力测评</h4>
+                                <p class="text-sm text-gray-600">发现你的优势和天赋</p>
+                            </div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs">✓</div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-3 flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mr-4">🔍</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold mb-1">兴趣探索</h4>
+                                <p class="text-sm text-gray-600">找到长期投入的热爱</p>
+                            </div>
+                            <div class="w-6 h-6 border-2 border-blue-500 rounded-full"></div>
+                        </div>
+                        
+                        <h3 class="font-bold mt-6 mb-3">推荐阅读</h3>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <h4 class="font-bold mb-2">如何区分真正的热爱与一时兴起</h4>
+                            <p class="text-sm text-gray-600">了解持久兴趣和短暂热情的区别，避免频繁跳槽和迷茫...</p>
+                            <div class="flex justify-between mt-3">
+                                <span class="text-xs text-gray-500">5分钟阅读</span>
+                                <span class="text-xs text-blue-500">阅读全文 ></span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white border-t border-gray-200 flex justify-around items-center px-2">
+                            <div class="flex flex-col items-center text-blue-500 text-xs">
+                                <div class="text-2xl mb-1">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 我的报告页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">我的报告页</div>
+                    <div class="h-full p-5 pb-20 overflow-y-auto">
+                        <h3 class="text-xl font-bold mb-4">我的自我探索报告</h3>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3 text-blue-500">你的核心价值观</h4>
+                            <div class="flex flex-wrap gap-2 my-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">创造性</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">自由</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">帮助他人</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">家庭</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">成长</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">你重视能够发挥创造力和保持自由的环境，同时也看重能够帮助他人和与家人在一起的机会。个人成长对你来说也非常重要。</p>
+                            <span class="text-xs text-blue-500">查看详情 ></span>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3 text-blue-500">你的核心能力</h4>
+                            <div class="flex flex-col gap-3 my-3">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>创意思维</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[85%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>沟通表达</span>
+                                        <span>78%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[78%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>分析能力</span>
+                                        <span>72%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[72%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-blue-500">查看详情 ></span>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3 text-blue-500">你的持久兴趣</h4>
+                            <div class="flex flex-wrap gap-2 my-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">艺术设计</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">教育培训</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">内容创作</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">心理学</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">你对于艺术设计和创意表达有持久的兴趣，同时也喜欢教育和帮助他人成长的活动。心理学领域也是你常常探索的方向。</p>
+                            <span class="text-xs text-blue-500">查看详情 ></span>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-green-500 to-green-700 text-white p-4 rounded-xl">
+                            <h4 class="font-bold mb-2">你的最佳匹配领域</h4>
+                            <p class="font-bold text-lg mb-2">创意教育者 / 内容创作者</p>
+                            <p class="mb-3">结合你的价值观、能力和兴趣，你最适合在创意教育和内容创作领域发展，可以考虑以下职业方向：</p>
+                            <ul class="list-disc pl-5 mb-4">
+                                <li>艺术教育工作者</li>
+                                <li>创意课程设计师</li>
+                                <li>教育内容创作者</li>
+                                <li>设计思维培训师</li>
+                            </ul>
+                            <button class="w-full bg-white text-green-700 px-4 py-3 rounded-full font-medium">制定行动计划</button>
+                        </div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white border-t border-gray-200 flex justify-around items-center px-2">
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="flex flex-col items-center text-blue-500 text-xs">
+                                <div class="text-2xl mb-1">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 行动计划页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">行动计划页</div>
+                    <div class="h-full p-5 pb-20 overflow-y-auto">
+                        <h3 class="text-xl font-bold mb-4">我的行动计划</h3>
+                        
+                        <div class="bg-gray-50 p-4 rounded-xl border border-dashed border-blue-500 mb-4">
+                            <h4 class="font-bold text-blue-500 text-center mb-3">创建新的行动计划</h4>
+                            <button class="w-full bg-blue-500 text-white px-4 py-3 rounded-full font-medium">开始制定</button>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold text-blue-500">探索艺术教育领域</h4>
+                                <span class="px-2 py-1 bg-green-100 text-green-600 rounded text-xs">进行中</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">目标：了解艺术教育行业现状，确定自己感兴趣的细分方向</p>
+                            <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden mb-1">
+                                <div class="h-full bg-blue-500 w-[35%]"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mb-4">
+                                <span>35% 完成</span>
+                                <span>截止日期：2023-12-31</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">查看详情</button>
+                                <button class="flex-1 bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg font-medium">更新进度</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold text-blue-500">学习内容创作技能</h4>
+                                <span class="px-2 py-1 bg-green-100 text-green-600 rounded text-xs">进行中</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">目标：掌握视频内容创作的基本技能，完成3个作品</p>
+                            <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden mb-1">
+                                <div class="h-full bg-blue-500 w-[60%]"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mb-4">
+                                <span>60% 完成</span>
+                                <span>截止日期：2023-11-15</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">查看详情</button>
+                                <button class="flex-1 bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg font-medium">更新进度</button>
+                            </div>
+                        </div>
+                        
+                        <h3 class="font-bold mt-6 mb-3">推荐资源</h3>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex items-center mb-3">
+                                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2730&q=80" alt="艺术教育资源" class="w-14 h-14 rounded-lg object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold mb-1">艺术教育入门指南</h4>
+                                    <p class="text-sm text-gray-600">了解行业现状和发展方向</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">查看资源</button>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex items-center mb-3">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="视频创作课程" class="w-14 h-14 rounded-lg object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold mb-1">视频内容创作课程</h4>
+                                    <p class="text-sm text-gray-600">从零开始学习视频创作</p>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">免费试学</button>
+                        </div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white border-t border-gray-200 flex justify-around items-center px-2">
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="flex flex-col items-center text-blue-500 text-xs">
+                                <div class="text-2xl mb-1">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 个人中心页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">个人中心页</div>
+                    <div class="h-full p-5 pb-20 overflow-y-auto">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-2xl font-bold mr-4">李</div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-1">小李</h3>
+                                <p class="text-sm text-gray-600">探索中的灵魂</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-6">
+                            <h4 class="font-bold mb-4">我的探索统计</h4>
+                            <div class="flex justify-between">
+                                <div class="text-center">
+                                    <h3 class="text-xl font-bold text-blue-500">2/3</h3>
+                                    <p class="text-sm text-gray-600 mt-1">测评完成</p>
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="text-xl font-bold text-blue-500">2</h3>
+                                    <p class="text-sm text-gray-600 mt-1">行动计划</p>
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="text-xl font-bold text-blue-500">45%</h3>
+                                    <p class="text-sm text-gray-600 mt-1">总进度</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3 mt-6">
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">📋</div>
+                                    <span>我的测评记录</span>
+                                </div>
+                                <span class="text-xl text-gray-400">></span>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">🎯</div>
+                                    <span>我的行动计划</span>
+                                </div>
+                                <span class="text-xl text-gray-400">></span>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">📚</div>
+                                    <span>我的学习资源</span>
+                                </div>
+                                <span class="text-xl text-gray-400">></span>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">⚙️</div>
+                                    <span>设置</span>
+                                </div>
+                                <span class="text-xl text-gray-400">></span>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">📞</div>
+                                    <span>联系客服</span>
+                                </div>
+                                <span class="text-xl text-gray-400">></span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white border-t border-gray-200 flex justify-around items-center px-2">
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="flex flex-col items-center text-blue-500 text-xs">
+                                <div class="text-2xl mb-1">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-md mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-3 mb-6">3. 测评与探索流程</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- 价值观测试引导页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">价值观测试引导页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <h3 class="text-xl font-bold text-center my-5">价值观测试</h3>
+                        <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="价值观测试" class="w-36 h-36 rounded-full mx-auto my-8 object-cover">
+                        
+                        <p class="text-center mx-5 my-8 leading-relaxed">价值观是指引我们做决定的内在准则，了解自己真正看重什么，是找到热爱事业的第一步。</p>
+                        
+                        <div class="bg-gray-50 rounded-xl p-4 my-5">
+                            <h4 class="font-bold mb-2">你将了解到：</h4>
+                            <ul class="pl-5 list-disc space-y-1">
+                                <li>你最核心的5-7个价值观</li>
+                                <li>这些价值观如何影响你的职业选择</li>
+                                <li>如何利用价值观来评估职业机会</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="text-sm text-gray-600 text-center my-8">完成测试大约需要 15-20 分钟</p>
+                        
+                        <button class="w-full bg-blue-500 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-600 mt-5">开始测试</button>
+                    </div>
+                </div>
+                
+                <!-- 价值观测试问题页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">价值观测试问题页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="flex justify-between items-center mb-5">
+                            <h3 class="text-xl font-bold">价值观测试</h3>
+                            <span class="text-sm text-blue-500">问题 5/20</span>
+                        </div>
+                        
+                        <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden mb-6">
+                            <div class="h-full bg-blue-500 w-1/4"></div>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold mb-5">当你回顾人生中最满足的经历时，哪些因素最常出现？</h4>
+                            
+                            <div class="space-y-3">
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>帮助他人取得进步或解决问题</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border-2 border-blue-500 rounded-lg bg-blue-50">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-blue-500 rounded-full mr-4 bg-blue-500"></div>
+                                        <span>创造出新的、独特的事物或想法</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>取得明确的成就或认可</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>与他人建立深厚的联系和关系</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>独立自主地做决定和行动</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between mt-8">
+                            <button class="w-[48%] bg-white text-blue-500 border border-blue-500 px-6 py-3 rounded-full font-medium">上一题</button>
+                            <button class="w-[48%] bg-blue-500 text-white px-6 py-3 rounded-full font-medium">下一题</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 能力测评问题页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">能力测评问题页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="flex justify-between items-center mb-5">
+                            <h3 class="text-xl font-bold">能力测评</h3>
+                            <span class="text-sm text-blue-500">问题 7/25</span>
+                        </div>
+                        
+                        <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden mb-6">
+                            <div class="h-full bg-blue-500 w-[28%]"></div>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold mb-5">以下情境中，你感觉最自信和得心应手的是：</h4>
+                            
+                            <div class="space-y-3">
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>分析复杂数据并找出关键模式</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>组织团队并协调多方资源完成项目</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border-2 border-blue-500 rounded-lg bg-blue-50">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-blue-500 rounded-full mr-4 bg-blue-500"></div>
+                                        <span>通过视觉或语言创作表达想法和情感</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>指导和帮助他人学习新知识或技能</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>解决技术问题或构建实用系统</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between mt-8">
+                            <button class="w-[48%] bg-white text-blue-500 border border-blue-500 px-6 py-3 rounded-full font-medium">上一题</button>
+                            <button class="w-[48%] bg-blue-500 text-white px-6 py-3 rounded-full font-medium">下一题</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 兴趣探索问题页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">兴趣探索问题页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="flex justify-between items-center mb-5">
+                            <h3 class="text-xl font-bold">兴趣探索</h3>
+                            <span class="text-sm text-blue-500">问题 3/15</span>
+                        </div>
+                        
+                        <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden mb-6">
+                            <div class="h-full bg-blue-500 w-1/5"></div>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-6">
+                            <h4 class="font-bold mb-5">你会因为什么类型的活动而忘记时间的流逝？</h4>
+                            
+                            <div class="space-y-3">
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>阅读和研究特定领域的知识</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>与他人深入交流和讨论</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border-2 border-blue-500 rounded-lg bg-blue-50">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-blue-500 rounded-full mr-4 bg-blue-500"></div>
+                                        <span>进行艺术或创意表达活动</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>解决实际问题或动手制作</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-3 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-5 h-5 border-2 border-gray-300 rounded-full mr-4"></div>
+                                        <span>计划和组织事务</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">反思问题</h4>
+                            <p class="text-sm text-gray-600 mb-3">回想最近的几次你完全投入其中的经历，有什么共同点？</p>
+                            <textarea class="w-full p-4 border border-gray-300 rounded-lg h-24" placeholder="请输入你的反思..."></textarea>
+                        </div>
+                        
+                        <div class="flex justify-between mt-5">
+                            <button class="w-[48%] bg-white text-blue-500 border border-blue-500 px-6 py-3 rounded-full font-medium">上一题</button>
+                            <button class="w-[48%] bg-blue-500 text-white px-6 py-3 rounded-full font-medium">下一题</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-md mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-3 mb-6">4. 分析与推荐</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- 分析结果页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">分析结果页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="text-center my-5">
+                            <h3 class="text-xl font-bold mb-1">你的自我探索报告</h3>
+                            <p class="text-sm text-gray-600">基于三个维度的综合分析</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-5">
+                            <h4 class="font-bold text-blue-500 mb-3">价值观分析</h4>
+                            <p class="text-sm mb-3">你的核心价值观是：</p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">创造性 (87%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">自由 (82%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">帮助他人 (78%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">家庭 (75%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">成长 (72%)</span>
+                            </div>
+                            <p class="text-sm text-gray-600">你高度重视能够发挥创造力的环境，同时也看重自由和能够帮助他人的机会。家庭和持续成长对你来说也非常重要。</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-5">
+                            <h4 class="font-bold text-blue-500 mb-3">能力分析</h4>
+                            <p class="text-sm mb-3">你的突出能力是：</p>
+                            <div class="space-y-3 mb-3">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>创意思维</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[85%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>沟通表达</span>
+                                        <span>78%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[78%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>分析能力</span>
+                                        <span>72%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[72%]"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>教学指导</span>
+                                        <span>68%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                        <div class="h-full bg-blue-500 w-[68%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">你在创意思维和表达方面展现出显著优势，这使你能够产生新想法并清晰地传达给他人。你的分析和教学能力也很强。</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-5">
+                            <h4 class="font-bold text-blue-500 mb-3">兴趣分析</h4>
+                            <p class="text-sm mb-3">你的持久兴趣领域是：</p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">艺术设计 (90%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">教育培训 (85%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">内容创作 (82%)</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">心理学 (75%)</span>
+                            </div>
+                            <p class="text-sm text-gray-600">你对于艺术设计和创意表达有持久的兴趣，同时也喜欢教育和帮助他人成长的活动。内容创作和心理学领域也引起你的持续关注。</p>
+                        </div>
+                        
+                        <button class="w-full bg-blue-500 text-white px-6 py-3 rounded-full font-medium my-5">查看职业推荐</button>
+                    </div>
+                </div>
+                
+                <!-- 推荐职业页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">推荐职业页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="text-center my-5">
+                            <h3 class="text-xl font-bold mb-1">为你推荐的职业方向</h3>
+                            <p class="text-sm text-gray-600">基于你的价值观、能力和兴趣</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-5 border-l-4 border-blue-500">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold">艺术教育工作者</h4>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">匹配度: 92%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">艺术教育工作者在学校、社区中心或私人工作室教授艺术技能，帮助学生发展创造力和表达能力。</p>
+                            <div class="mb-3">
+                                <h5 class="font-medium text-sm mb-2">匹配原因：</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">创造性 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">帮助他人 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">创意思维 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">教学指导 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">艺术设计 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">教育培训 ✓</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">了解详情</button>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-5 border-l-4 border-blue-500">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold">教育内容创作者</h4>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">匹配度: 88%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">教育内容创作者制作视频、播客、文章等形式的学习内容，帮助人们获取知识和技能。</p>
+                            <div class="mb-3">
+                                <h5 class="font-medium text-sm mb-2">匹配原因：</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">创造性 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">自由 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">帮助他人 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">创意思维 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">沟通表达 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">内容创作 ✓</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">了解详情</button>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-xl shadow-sm mb-5 border-l-4 border-blue-500">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="font-bold">创意课程设计师</h4>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">匹配度: 85%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">创意课程设计师为教育机构或在线平台开发互动性强、富有创意的学习项目和课程内容。</p>
+                            <div class="mb-3">
+                                <h5 class="font-medium text-sm mb-2">匹配原因：</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">创造性 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">帮助他人 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">创意思维 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">分析能力 ✓</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">教育培训 ✓</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">了解详情</button>
+                        </div>
+                        
+                        <button class="w-full bg-blue-500 text-white px-6 py-3 rounded-full font-medium my-5">制定行动计划</button>
+                    </div>
+                </div>
+                
+                <!-- 职业详情页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">职业详情页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="mb-5">
+                            <h3 class="text-xl font-bold mb-2">艺术教育工作者</h3>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-xs">匹配度: 92%</span>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-2">职业描述</h4>
+                            <p class="text-sm leading-relaxed">艺术教育工作者负责教授绘画、雕塑、摄影等艺术形式，不仅传授技能，还培养学生的创造力、批判性思维和自我表达能力。他们可以在K-12学校、高等教育机构、社区中心、艺术工作室或线上平台工作。</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-2">为什么适合你</h4>
+                            <ul class="pl-5 list-disc text-sm space-y-1 leading-relaxed">
+                                <li>满足你创造性表达的核心价值观</li>
+                                <li>符合你帮助他人成长的追求</li>
+                                <li>充分发挥你的创意思维和沟通能力</li>
+                                <li>结合了你对艺术设计和教育培训的兴趣</li>
+                                <li>提供一定的自由度和成长空间</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">所需技能</h4>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">艺术技能</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">教学能力</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">课程设计</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">沟通表达</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">组织能力</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs">评估技巧</span>
+                            </div>
+                            
+                            <h5 class="font-medium text-sm mb-2">你已具备的技能：</h5>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs">创意思维</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs">沟通表达</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs">教学指导</span>
+                            </div>
+                            
+                            <h5 class="font-medium text-sm mb-2">需要发展的技能：</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-red-100 text-red-500 rounded-full text-xs">课程设计</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-500 rounded-full text-xs">评估方法</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">发展路径</h4>
+                            <div class="space-y-4 mb-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">1</div>
+                                    <div>
+                                        <h5 class="font-medium text-sm">入门阶段</h5>
+                                        <p class="text-xs text-gray-600">助教、志愿者、实习教师</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">2</div>
+                                    <div>
+                                        <h5 class="font-medium text-sm">成长阶段</h5>
+                                        <p class="text-xs text-gray-600">全职艺术教师、工作室导师</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3">3</div>
+                                    <div>
+                                        <h5 class="font-medium text-sm">专业阶段</h5>
+                                        <p class="text-xs text-gray-600">艺术教育总监、课程开发者、线上平台创建者</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">学习资源</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-sm mb-2">推荐课程</h5>
+                                    <ul class="pl-5 list-disc text-sm space-y-1">
+                                        <li>艺术教育基础理论</li>
+                                        <li>创意教学方法</li>
+                                        <li>课程设计与开发</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-medium text-sm mb-2">推荐书籍</h5>
+                                    <ul class="pl-5 list-disc text-sm space-y-1">
+                                        <li>《艺术教育的力量》</li>
+                                        <li>《创意教学：从理论到实践》</li>
+                                        <li>《如何评估艺术学习》</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-medium text-sm mb-2">实践机会</h5>
+                                    <ul class="pl-5 list-disc text-sm space-y-1">
+                                        <li>社区艺术中心志愿者</li>
+                                        <li>线上艺术教学平台助教</li>
+                                        <li>学校艺术兴趣小组带领者</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3 my-5">
+                            <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">保存到收藏</button>
+                            <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">制定行动计划</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 行动计划创建页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">行动计划创建页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <h3 class="text-xl font-bold mb-1">制定行动计划</h3>
+                        <p class="text-sm text-gray-600 mb-4">为你的艺术教育工作者职业发展创建计划</p>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">计划名称</h4>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="例如：探索艺术教育领域" value="探索艺术教育领域">
+                            
+                            <h4 class="font-bold mt-4 mb-3">目标描述</h4>
+                            <textarea class="w-full p-3 border border-gray-300 rounded-lg h-24" placeholder="描述你想达成的具体目标...">了解艺术教育行业现状，确定自己感兴趣的细分方向，并获取入门所需的技能和资源。</textarea>
+                            
+                            <h4 class="font-bold mt-4 mb-3">目标期限</h4>
+                            <input type="date" class="w-full p-3 border border-gray-300 rounded-lg" value="2023-12-31">
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">关键步骤</h4>
+                            <div class="space-y-4 mb-3">
+                                <div class="border border-gray-300 rounded-lg p-4">
+                                    <input type="text" class="w-full p-3 border border-gray-300 rounded-lg mb-3" placeholder="步骤1" value="研究不同类型的艺术教育工作">
+                                    <textarea class="w-full p-3 border border-gray-300 rounded-lg h-16 mb-3" placeholder="详细描述...">查找并阅读关于各类艺术教育工作的职业介绍，包括学校教师、社区艺术导师、线上教育等。</textarea>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm">截止日期：</span>
+                                        <input type="date" class="p-2 border border-gray-300 rounded-md w-36" value="2023-10-15">
+                                    </div>
+                                </div>
+                                
+                                <div class="border border-gray-300 rounded-lg p-4">
+                                    <input type="text" class="w-full p-3 border border-gray-300 rounded-lg mb-3" placeholder="步骤2" value="参加艺术教育入门课程">
+                                    <textarea class="w-full p-3 border border-gray-300 rounded-lg h-16 mb-3" placeholder="详细描述...">寻找并报名参加一门关于艺术教育基础的线上或线下课程。</textarea>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm">截止日期：</span>
+                                        <input type="date" class="p-2 border border-gray-300 rounded-md w-36" value="2023-11-15">
+                                    </div>
+                                </div>
+                                
+                                <div class="border border-gray-300 rounded-lg p-4">
+                                    <input type="text" class="w-full p-3 border border-gray-300 rounded-lg mb-3" placeholder="步骤3" value="寻找实践机会">
+                                    <textarea class="w-full p-3 border border-gray-300 rounded-lg h-16 mb-3" placeholder="详细描述...">联系当地社区中心或艺术机构，寻找志愿者或助教机会，获取实际教学经验。</textarea>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-sm">截止日期：</span>
+                                        <input type="date" class="p-2 border border-gray-300 rounded-md w-36" value="2023-12-15">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="w-full bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg font-medium">+ 添加步骤</button>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">资源需求</h4>
+                            <div class="space-y-3 mb-3">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-3 h-4 w-4">
+                                    <span class="text-sm">艺术教育入门课程费用</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-3 h-4 w-4">
+                                    <span class="text-sm">每周约10小时的学习和实践时间</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-3 h-4 w-4">
+                                    <span class="text-sm">艺术材料和教学工具</span>
+                                </div>
+                            </div>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="添加其他资源...">
+                        </div>
+                        
+                        <button class="w-full bg-blue-500 text-white px-6 py-3 rounded-full font-medium my-4">保存计划</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-md mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-3 mb-6">5. 社区与支持功能</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- 社区页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">社区页</div>
+                    <div class="h-full p-5 pb-20 overflow-y-auto">
+                        <h3 class="text-xl font-bold mb-4">探索社区</h3>
+                        
+                        <div class="flex justify-between my-5">
+                            <div class="w-[48%] py-4 bg-blue-100 text-blue-500 rounded-xl text-center">
+                                <span class="text-xl">👥</span>
+                                <p class="text-sm mt-1">同路人</p>
+                            </div>
+                            <div class="w-[48%] py-4 bg-gray-100 text-gray-600 rounded-xl text-center">
+                                <span class="text-xl">👨‍🏫</span>
+                                <p class="text-sm mt-1">导师</p>
+                            </div>
+                        </div>
+                        
+                        <div class="my-5">
+                            <input type="text" class="w-full p-3 bg-gray-100 border-none rounded-lg" placeholder="搜索话题、人或群组...">
+                            
+                            <div class="flex overflow-x-auto my-4 pb-2">
+                                <div class="min-w-[80px] px-4 py-2 bg-blue-100 text-blue-500 rounded-full text-sm text-center mx-1 whitespace-nowrap">全部</div>
+                                <div class="min-w-[100px] px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm text-center mx-1 whitespace-nowrap">艺术教育</div>
+                                <div class="min-w-[100px] px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm text-center mx-1 whitespace-nowrap">内容创作</div>
+                                <div class="min-w-[100px] px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm text-center mx-1 whitespace-nowrap">职业转型</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex mb-3">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold mr-3">张</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">张小明</h4>
+                                    <p class="text-xs text-gray-600">艺术教育工作者 | 5年经验</p>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed mb-3">我从事儿童艺术教育已有5年，很高兴能在这里和大家分享经验。刚开始可能会觉得困难，但当你看到学生们创作出令人惊喜的作品时，一切都值得了！</p>
+                            <div class="flex gap-3">
+                                <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg text-sm">查看详情</button>
+                                <button class="flex-1 bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg text-sm">发起对话</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex mb-3">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold mr-3">王</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">王丽</h4>
+                                    <p class="text-xs text-gray-600">教育内容创作者 | 3年经验</p>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed mb-3">三年前我还在金融行业，现在是一名专职的教育内容创作者。如果你对职业转型有疑问，或者想了解内容创作的日常，欢迎交流！</p>
+                            <div class="flex gap-3">
+                                <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg text-sm">查看详情</button>
+                                <button class="flex-1 bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg text-sm">发起对话</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <div class="flex mb-3">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold mr-3">李</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">李佳</h4>
+                                    <p class="text-xs text-gray-600">职业探索中 | 艺术教育方向</p>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-relaxed mb-3">我和你一样，正在探索艺术教育这条路。刚刚在社区中心找到一个志愿者机会，很期待和大家分享我的探索历程！</p>
+                            <div class="flex gap-3">
+                                <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg text-sm">查看详情</button>
+                                <button class="flex-1 bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg text-sm">发起对话</button>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white border-t border-gray-200 flex justify-around items-center px-2">
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🏠</div>
+                                <span>首页</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">📊</div>
+                                <span>报告</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">🎯</div>
+                                <span>计划</span>
+                            </div>
+                            <div class="flex flex-col items-center text-gray-500 text-xs">
+                                <div class="text-2xl mb-1">👤</div>
+                                <span>我的</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 导师详情页 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">导师详情页</div>
+                    <div class="h-full p-5 overflow-y-auto">
+                        <div class="text-center my-5">
+                            <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold text-3xl mx-auto">张</div>
+                            <h3 class="font-bold text-xl mt-3 mb-1">张小明</h3>
+                            <p class="text-sm text-gray-600">艺术教育工作者 | 5年经验</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">个人简介</h4>
+                            <p class="text-sm leading-relaxed">我是一名专注于儿童艺术教育的工作者，曾在公立学校和私人工作室任教。我相信每个孩子都有创造的天赋，我的使命是帮助他们发现并发展这种能力。我擅长通过游戏化方式激发学生的创造力和想象力。</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">专业领域</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">儿童艺术教育</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">创意思维培养</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">课程设计</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-500 rounded-full text-sm">绘画技法</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">工作经历</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-sm mb-1">彩虹艺术工作室</h5>
+                                    <p class="text-xs text-gray-600 mb-1">艺术教育总监 | 2021-至今</p>
+                                    <p class="text-sm">负责课程开发和教师培训，为3-12岁儿童设计创意艺术课程。</p>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-medium text-sm mb-1">明德小学</h5>
+                                    <p class="text-xs text-gray-600 mb-1">艺术教师 | 2018-2021</p>
+                                    <p class="text-sm">担任小学艺术教师，教授绘画、手工等课程，组织学校艺术活动。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">可提供帮助</h4>
+                            <ul class="pl-5 list-disc text-sm space-y-1">
+                                <li>艺术教育行业入门指导</li>
+                                <li>教学技巧与课堂管理分享</li>
+                                <li>创意课程设计咨询</li>
+                                <li>职业发展路径规划</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-xl shadow-sm mb-4">
+                            <h4 class="font-bold mb-3">指导评价</h4>
+                            <div class="space-y-4">
+                                <div class="flex">
+                                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-3">赵</div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between mb-1">
+                                            <h5 class="font-medium text-sm">赵明</h5>
+                                            <div class="text-yellow-500">★★★★★</div>
+                                        </div>
+                                        <p class="text-sm">张老师的建议非常实用，帮我解决了课堂管理的难题。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex">
+                                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-3">孙</div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between mb-1">
+                                            <h5 class="font-medium text-sm">孙丽</h5>
+                                            <div class="text-yellow-500">★★★★☆</div>
+                                        </div>
+                                        <p class="text-sm">感谢张老师分享的职业发展建议，让我对未来更有信心。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3 my-5">
+                            <button class="flex-1 bg-blue-500 text-white px-4 py-2 rounded-lg font-medium">预约指导</button>
+                            <button class="flex-1 bg-white text-blue-500 border border-blue-500 px-4 py-2 rounded-lg font-medium">发送消息</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 对话页面 -->
+                <div class="w-80 h-[640px] bg-white rounded-3xl overflow-hidden shadow-lg border-8 border-gray-800 relative">
+                    <div class="text-center text-sm text-gray-500 font-bold mb-1">对话页面</div>
+                    <div class="h-full flex flex-col">
+                        <div class="flex items-center p-4 border-b border-gray-200">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold mr-3">张</div>
+                            <div>
+                                <h4 class="font-bold">张小明</h4>
+                                <p class="text-xs text-gray-500">在线 · 最近活跃于3分钟前</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1 p-4 overflow-y-auto bg-gray-50">
+                            <div class="mb-4">
+                                <div class="flex mb-1">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xs mr-2">张</div>
+                                    <div class="max-w-[70%] bg-white p-3 rounded-2xl text-sm">
+                                        你好！很高兴认识你。我看到你对艺术教育很感兴趣，有什么我可以帮助你的吗？
+                                    </div>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-10">10:30</span>
+                            </div>
+                            
+                            <div class="mb-4 flex flex-col items-end">
+                                <div class="max-w-[70%] bg-blue-100 p-3 rounded-2xl text-sm">
+                                    你好张老师！我正在考虑转向艺术教育领域，但没有相关经验。你觉得我应该从哪里开始呢？
+                                </div>
+                                <span class="text-xs text-gray-500">10:32</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex mb-1">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-xs mr-2">张</div>
+                                    <div class="max-w-[70%] bg-white p-3 rounded-2xl text-sm">
+                                        这是个好问题！我建议你先从以下几个方面入手：
+                                        <br><br>
+                                        1. 参加一些基础的艺术教育课程或工作坊，了解教学理念和方法
+                                        <br><br>
+                                        2. 在社区中心或艺术机构寻找志愿者机会，积累实际经验
+                                        <br><br>
+                                        3. 阅读一些艺术教育的入门书籍，如《艺术教育的力量》
+                                        <br><br>
+                                        你有任何特定的艺术专长吗？
+                                    </div>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-10">10:35</span>
+                            </div>
+                            
+                            <div class="mb-4 flex flex-col items-end">
+                                <div class="max-w-[70%] bg-blue-100 p-3 rounded-2xl text-sm">
+                                    非常感谢这些建议！我有一些绘画基础，主要是水彩和素描。你提到的志愿者机会很有启发，我应该如何寻找这类机会呢？
+                                </div>
+                                <span class="text-xs text-gray-500">10:37</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 border-t border-gray-200 flex items-center">
+                            <input type="text" class="flex-1 p-3 bg-gray-100 border-none rounded-xl mr-2" placeholder="输入消息...">
+                            <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center">→</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
