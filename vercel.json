@@ -1,8 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/ui/",
-      "destination": "truelove_prototype_2.html"
-    }
-  ]
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "index.html"
+        }
+    ]
 }
