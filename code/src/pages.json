@@ -7,23 +7,9 @@
   },
   "pages": [
     {
-      "path": "pages/splash/index",
-      "style": {
-        "navigationBarTitleText": "True Love",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/onboarding/index",
-      "style": {
-        "navigationBarTitleText": "引导页",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/login/index",
       "style": {
-        "navigationBarTitleText": "登录/注册",
+        "navigationBarTitleText": "登录",
         "navigationStyle": "custom"
       }
     },
@@ -35,132 +21,198 @@
       }
     },
     {
-      "path": "pages/report/index",
+      "path": "pages/test/index",
       "style": {
-        "navigationBarTitleText": "报告",
+        "navigationBarTitleText": "职业测评",
         "navigationStyle": "custom"
       }
     },
     {
-      "path": "pages/plan/index",
+      "path": "pages/test/list",
       "style": {
-        "navigationBarTitleText": "行动计划",
+        "navigationBarTitleText": "测评列表",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/test/result",
+      "style": {
+        "navigationBarTitleText": "测评结果",
         "navigationStyle": "custom"
       }
     },
     {
-      "path": "pages/profile/index",
+      "path": "pages/test/history",
       "style": {
-        "navigationBarTitleText": "我的",
-        "navigationStyle": "custom"
+        "navigationBarTitleText": "测评历史",
+        "enablePullDownRefresh": true
       }
     },
     {
-      "path": "pages/valueTest/index",
-      "style": {
-        "navigationBarTitleText": "价值观测试",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/abilityTest/index",
-      "style": {
-        "navigationBarTitleText": "能力测评",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/interestTest/index",
-      "style": {
-        "navigationBarTitleText": "兴趣探索",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/analysis/index",
-      "style": {
-        "navigationBarTitleText": "分析结果",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/recommendation/index",
-      "style": {
-        "navigationBarTitleText": "职业推荐",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/jobDetail/index",
+      "path": "pages/career/detail",
       "style": {
         "navigationBarTitleText": "职业详情",
         "navigationStyle": "custom"
       }
     },
     {
-      "path": "pages/createPlan/index",
+      "path": "pages/career/list",
       "style": {
-        "navigationBarTitleText": "创建计划",
+        "navigationBarTitleText": "职业列表",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/career/match",
+      "style": {
+        "navigationBarTitleText": "匹配职业",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/career/favorite",
+      "style": {
+        "navigationBarTitleText": "收藏职业",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/plan/detail",
+      "style": {
+        "navigationBarTitleText": "计划详情",
         "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/plan/list",
+      "style": {
+        "navigationBarTitleText": "成长计划",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/plan/create",
+      "style": {
+        "navigationBarTitleText": "创建计划"
+      }
+    },
+    {
+      "path": "pages/plan/edit",
+      "style": {
+        "navigationBarTitleText": "编辑计划"
+      }
+    },
+    {
+      "path": "pages/task/detail",
+      "style": {
+        "navigationBarTitleText": "任务详情"
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/user/edit",
+      "style": {
+        "navigationBarTitleText": "编辑资料"
       }
     },
     {
       "path": "pages/community/index",
       "style": {
-        "navigationBarTitleText": "社区",
-        "navigationStyle": "custom"
+        "navigationBarTitleText": "职业社区",
+        "enablePullDownRefresh": true
       }
     },
     {
-      "path": "pages/mentorDetail/index",
+      "path": "pages/community/detail",
       "style": {
-        "navigationBarTitleText": "导师详情",
-        "navigationStyle": "custom"
+        "navigationBarTitleText": "话题详情"
       }
     },
     {
-      "path": "pages/chat/index",
+      "path": "pages/community/publish",
       "style": {
-        "navigationBarTitleText": "对话",
-        "navigationStyle": "custom"
+        "navigationBarTitleText": "发布话题"
+      }
+    },
+    {
+      "path": "pages/mentor/index",
+      "style": {
+        "navigationBarTitleText": "职场导师",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/mentor/detail",
+      "style": {
+        "navigationBarTitleText": "导师详情"
+      }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "搜索结果"
+      }
+    },
+    {
+      "path": "pages/setting/index",
+      "style": {
+        "navigationBarTitleText": "设置"
+      }
+    },
+    {
+      "path": "pages/about/index",
+      "style": {
+        "navigationBarTitleText": "关于我们"
+      }
+    },
+    {
+      "path": "pages/agreement/index",
+      "style": {
+        "navigationBarTitleText": "用户协议"
       }
     }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "True Love",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#1E88E5",
-    "backgroundColor": "#ffffff",
+    "selectedColor": "#3D7EFF",
+    "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/home/index",
         "text": "首页",
-        "iconPath": "static/images/tabbar/home.png",
-        "selectedIconPath": "static/images/tabbar/home-active.png"
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png"
       },
       {
-        "pagePath": "pages/report/index",
-        "text": "报告",
-        "iconPath": "static/images/tabbar/report.png",
-        "selectedIconPath": "static/images/tabbar/report-active.png"
+        "pagePath": "pages/test/list",
+        "text": "测评",
+        "iconPath": "static/tabbar/test.png",
+        "selectedIconPath": "static/tabbar/test-active.png"
       },
       {
-        "pagePath": "pages/plan/index",
+        "pagePath": "pages/plan/list",
         "text": "计划",
-        "iconPath": "static/images/tabbar/plan.png",
-        "selectedIconPath": "static/images/tabbar/plan-active.png"
+        "iconPath": "static/tabbar/plan.png",
+        "selectedIconPath": "static/tabbar/plan-active.png"
       },
       {
-        "pagePath": "pages/profile/index",
+        "pagePath": "pages/user/index",
         "text": "我的",
-        "iconPath": "static/images/tabbar/profile.png",
-        "selectedIconPath": "static/images/tabbar/profile-active.png"
+        "iconPath": "static/tabbar/user.png",
+        "selectedIconPath": "static/tabbar/user-active.png"
       }
     ]
   }

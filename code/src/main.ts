@@ -11,6 +11,16 @@ export function createApp() {
   
   return {
     app,
-    Pinia
+    Pinia,
+    // 配置路由
+    router: {
+      // 路由配置
+      routes: [
+        {
+          path: '/',
+          redirect: '/pages/home/index'
+        }
+      ]
+    }
   }
 } 
